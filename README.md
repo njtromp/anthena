@@ -21,8 +21,6 @@ The library emits the following events:
 | 1 (> 1 sec) | 1 (> 1 sec) | Initiate autonomous driving | AUTONOMOUS                |
 
 
-
-
 ## Flag 
 
 This library is for raising and lowering the flag. With event RAISE_FLAG starts raising the flag until encoder hits >=90 and will stop the raising. With the event LOWER_FLAG starts lowering the flag until the encoder hits <=0.
@@ -33,7 +31,14 @@ This library is for raising and lowering the flag. With event RAISE_FLAG starts 
  Lowering the flag           | LOWER_FLAG                | 
 
 
+## DistanceSensor
 
+The distance sensor library needs to be connected to a ultrasonic sensor.
 
+The library emits the following events:
 
-
+| Action                      | Event              |
+|-----------------------------|--------------------|
+| Distance < 255 cm           | APPROACHING_BEAST  |
+| Distance < 12 cm            | FOUND_BEAST        |
+| Distance < 10 cm            | TOO_CLOSE_TO_BEAST |
