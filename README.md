@@ -19,3 +19,21 @@ The library emits the following events:
 | 1           | 0           | Turn left                   | TURN_LEFT / STOP_TURNING  |
 | 1(<1 sec)   | 1(<1 sec)   | Start driving forward/Stop  | FORWARD_STOP              |
 | 1 (> 1 sec) | 1 (> 1 sec) | Initiate autonomous driving | AUTONOMOUS                |
+
+
+
+
+## Flag 
+
+This library is for raising and lowering the flag. With event RAISE_FLAG starts raising the flag until encoder hits >=90 and will stop the raising. With the event LOWER_FLAG starts lowering the flag until the encoder hits <=0.
+
+ Action                      | Event                     |
+-----------------------------|---------------------------|
+ Raising the flag            | RAISE_FLAG                |  
+ Lowering the flag           | LOWER_FLAG                | 
+
+
+
+
+
+
