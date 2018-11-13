@@ -15,10 +15,10 @@ The library emits the following events:
 | Left        | Right       | Action                      | Event                     |
 |-------------|-------------|-----------------------------|---------------------------|
 | 0           | 0           | No change                   | -                         |
-| 0           | 1           | Turn right                  | TURN_RIGHT / STOP_TURNING |
-| 1           | 0           | Turn left                   | TURN_LEFT / STOP_TURNING  |
-| 1(<1 sec)   | 1(<1 sec)   | Start driving forward/Stop  | FORWARD_STOP              |
-| 1 (> 1 sec) | 1 (> 1 sec) | Initiate autonomous driving | AUTONOMOUS                |
+| 0           | 1           | Turn right                  | RHOLD / RELEASE / BUTTON_ACTIVITY
+| 1           | 0           | Turn left                   | LHOLD / RELEASE / BUTTON_ACTIVITY |
+| 1(<1 sec)   | 1(<1 sec)   | Start driving forward/Stop  | SHORT_PRESS / BUTTON_ACTIVITY             |
+| 1 (> 1 sec) | 1 (> 1 sec) | Initiate autonomous driving | LONG_PRESS / BUTTON_ACTIVITY               |
 
 
 ## Flag 
