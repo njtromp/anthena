@@ -27,3 +27,5 @@ codegen/
 # Octave session info
 octave-workspace
 
+# Lego Mindstorms/Simulink project executables
+*_ert_rtw/
