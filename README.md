@@ -42,3 +42,18 @@ The library emits the following events:
 | Distance < 255 cm           | APPROACHING_BEAST  |
 | Distance < 12 cm            | FOUND_BEAST        |
 | Distance < 10 cm            | TOO_CLOSE_TO_BEAST |
+
+## DriveStraight
+
+This library constantly corrects the spinning speed of the motors in order to keep it running in a straight line.
+
+| Input         | Description                      |
+|---------------|----------------------------------|
+| maxPower      | The maximum power to use.        |
+| leftRotation  | The encoder for the left wheel.  |
+| rightRotation | The encoder for the right wheel. |
+
+| Output        | Description                           |
+|---------------|---------------------------------------|
+| leftMotor     | To power setting for the left motor.  |
+| rightMotor    | To power setting for the right motor. |
