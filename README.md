@@ -57,3 +57,22 @@ This library constantly corrects the spinning speed of the motors in order to ke
 |---------------|---------------------------------------|
 | leftMotor     | To power setting for the left motor.  |
 | rightMotor    | To power setting for the right motor. |
+
+## HomeDetector
+
+This library detects if the robot found the green safe zone, aka home. It assumes the safe zone is reached when the set value is detected for a certain time.
+Internal there are three settings that influence the behavior of the detector.
+
+| Input      | Description                      |
+|------------|----------------------------------|
+| color      | The reflective color value.      |
+
+| Event      | Description                              |
+|------------|------------------------------------------|
+| GREEN      | Set to true when safe zone is detected.  |
+
+| Setting     | Description                                                                               |
+|-------------|-------------------------------------------------------------------------------------------|
+| HOME_COLOR  | The value which is considdered the safe zone has.                                         |
+| THRESH_HOLD | The threshold which determines the range of the color that is detected as the home color. |
+| DELAY       | The time (in milliseconds) the color value is within the threshold.                       |
