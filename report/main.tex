@@ -133,6 +133,9 @@ Each of the engineers has their own field of expertise.\\
 \subsection{Grade distribution}
 All of the engineers contributed equally in the project. 
 \section{Motivation of model}
+\subsection{Overall design}
+Most parts of the robot are created as separate libraries with one large model (\textit{Athena.slx}) that combines these libraries into the final product. This modular setup makes changing or even replacing the smaller sub-systems very easy.\\
+For communication between the libraries an event-like system is being used. Each library that needs to send an 'event' to other parts of the system defines an output variable of type \textit{boolean}. By default its value is \textbf{false} and when the library sends the 'event' its value is set to \textbf{true}. Any other part of the system that listens to this event defines a input variable (also of type \textit{boolean}) and uses that in the guards for transitions between states. These two variables are bind with each other by means of the \textbf{Subchart Mappings...} feature of Simulink. We chose this solution because Simulink does not allow subcharts to send events.
 \subsection{Line following}
 For the line following three approaches were designed. 
 \begin{itemize}
@@ -141,8 +144,11 @@ For the line following three approaches were designed.
     \item Approach 3 (Nico) involved a controller written in Stateflow and the optical sensor in reflective mode. This controller follows the black line on the left side. When the value from the sensor directs is to higher then a pre-set value (this happens when the robot is to far to the left) the robot is instructed to turn to the right. If the value from the sensor is to low (which means the robot is to much to the right) the robot is instructed to the left. The directional corrections are divided into three different steps. Depending on the difference between the current value from the sensor and the pre-set value the correction is either small, medium or large.\\
     Due to the geometry of the robot (the light sensor is on the right side of the robot) the correction for turning left and right is not completely symmetrical. When turning to the left the corrections for the motors tend to be larger since a change is speed of the left wheel has a small impact on the position of the light sensor.
 \end{itemize}
-\subsection{Overall design}
 \bibliographystyle{acm}
 \bibliography{test.bib}
+
+% These are things that at least should be in the bibliography as far as I know
+% https://nl.mathworks.com/help/
+% http://www.inpharmix.com/jps/PID_Controller_For_Lego_Mindstorms_Robots.html
 
 \end{document}
