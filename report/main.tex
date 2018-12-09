@@ -159,6 +159,8 @@ The detection of the safe zone (green circle) is done by measuring the time the 
 \subsection{Line following and safe zone detection}
 In order to keep the Traal rover to drive in a straight line once the safe zone (the green circele) has been reached, the Traal rover is instructed to aim at the reflective value of the safe zone. This ensures that the (home detector) has enough time to detect that the safe zone has been reached.\\
 To prevent false positives while the Traal rover follows the black line, it wiggles as a dug while driving. By wiggling the value of the light sensor continuously changes and thereby resets the timing of the safe zone detection.
+\subsection{Driving straight}
+When driving in a straight line the Traal rover tries to minimize the difference between the rotation encoders between the left and the right engine. Depending on the difference and the current power settings one of the engines is corrected.
 
 \bibliographystyle{acm}
 \begin{thebibliography}{9}
