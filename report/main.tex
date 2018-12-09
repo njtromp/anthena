@@ -145,9 +145,12 @@ Most parts of the robot are created as separate libraries with one large model (
 In the beginning, each engineer was responsible to create one library which would control one of the aspects of the robot and send events. For example, they had created the distance sensor library which was, initially, sending back an event when the robot was close to the beast. When they tried to compose all the libraries, they run into the problem that Simulink does not allow subcharts to send events. To overcome this problem, they changed the output of each library and instead of sending back events they decided to send back variables of type \textit{boolean} to the other parts of the system. By default, its value is \textbf{false} and when the library sends the 'event' its value is set to \textbf{true}. Any other part of the system that listens to this event defines an input variable (also of type \textit{boolean}) and uses that in the guards for transitions between states. These two variables are bind with each other by means of the \textbf{Subchart Mappings...} feature of Simulink.
 
 \bibliographystyle{acm}
-% These are things that at least should be in the bibliography as far as I know
-% https://nl.mathworks.com/help/
-% http://www.inpharmix.com/jps/PID_Controller_For_Lego_Mindstorms_Robots.html
-\bibliography{test.bib}
+\begin{thebibliography}{9}
+\bibitem{} MathWorks Documentation. Retrieve from\\
+\url{https://nl.mathworks.com/help/}
+\bibitem{}J. Sluka. (n.d). A PID Controller For Lego Mindstorms Robots. Retrieve from\\
+\url{http://www.inpharmix.com/jps/PID_Controller_For_Lego_Mindstorms_Robots.html}
+\bibitem{} Embedded Software and Systems 2018, Practical Project: Traal-Rover.
+\end{thebibliography}
 
 \end{document}
