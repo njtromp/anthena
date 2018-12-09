@@ -161,6 +161,8 @@ In order to keep the Traal rover to drive in a straight line once the safe zone 
 To prevent false positives while the Traal rover follows the black line, it wiggles as a dug while driving. By wiggling the value of the light sensor continuously changes and thereby resets the timing of the safe zone detection.
 \subsection{Driving straight}
 When driving in a straight line the Traal rover tries to minimize the difference between the rotation encoders between the left and the right engine. Depending on the difference and the current power settings one of the engines is corrected.
+\subsection{Constants}
+Simulink offers the possibility to define 'constants'. We made use of this in multiple models, for example the maximum speed for a engine or the aiming value for the reflective sensor.
 
 \bibliographystyle{acm}
 \begin{thebibliography}{9}
