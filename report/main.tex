@@ -126,8 +126,9 @@ Each of the engineers has their own field of expertise.\\
     \item Engineer Vasilis is an excellent communications expert. He was assigned the tasks of phoning home and raising the flag when the rover has found the resources. Whenever there is an encounter with a beast his work makes sure that Athena flees in the right direction.
     \item Engineer Anna worked one of the solutions for following the black line and made a library for the color sensor.
     \item Engineer Sjoerd took up the responsibility to combine all of the work of the other engineers in one complete package.
-    \item Engineer Nico worked on a second solution for following the black line, a solution for detecting the green resources field and he was also responsible for making sure that the robot would drive completely straight in both the autonomous and manual mode.
-    \item Engineer Rocco worked on a third approach for following the black line using a PID controller. He was also responsible for the manual controls of the robot.
+    \item Engineer Rocco worked on a second approach for following the black line using a PID controller. He was also responsible for the manual controls of the robot.
+    \item Engineer Nico worked on a third solution for following the black line, a solution for detecting the green resources field and he was also responsible for making sure that the robot would drive completely straight in both the autonomous and manual mode.
+    \item Engineers Vaslis and Nico worked on recognizing the safe zone once the black line is being followed.
 \end{itemize}
 \subsection{Grade distribution}
 All of the engineers contributed equally in the project. 
@@ -136,7 +137,7 @@ For the line following three approaches were designed.
 \begin{itemize}
     \item Approach 1 (Anna) involved a model purely written in Stateflow using the optical sensor in color mode. The robot kept following the black color. When it detected something else than black it would swivel in increasingly bigger arches until it found the black line again. When the black line was detected again it would keep track whether it was approaching the left or right side of the line in order to use it to swivel in that direction first whenever it would lose the black line again.
     \item Approach 2 (Rocco) involved a PID controller and the optical sensor in reflected light intensity mode. This approach allowed for accurately tracking the border of the black line. After some tuning of the PID values this approach seemed to work. However issues arose when integrating the external PID library in the final model.
-    \item Approach 3 involved a P controller written in Stateflow and the optical sensor in reflected light intensity mode. ...
+    \item Approach 3 (Nico) involved a controller written in Stateflow and the optical sensor in reflected light intensity mode. This controller follows the black line on the left side. When the value from the reflective sensor directs is to higher then a pre-set value (this happens when the robot is to far to the left) the robot is instructed to turn to the right. If the value from the reflective sensor is to low (which means the robot is to much to the right) the robot is instructed to the left. The directional corrections are divided into three different steps. Depending on the difference between t
 \end{itemize}
 
 \bibliographystyle{acm}
